@@ -1,0 +1,125 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 10px;
+    color: #333030;
+}
+
+#container { width: 50%; height: 100vh; margin: 0 auto; display: table; }
+#wrap { display: table-cell; vertical-align: middle; }
+
+header {
+    padding: 30px 0;
+    border-bottom: 1px solid #e3dede;
+}
+
+#summary { padding: 40px; line-height: 1.5; }
+#name-kr { font-size: 2.5rem; }
+#name-en { font-size: 2.0rem; font-style: italic; }
+#job { margin-top: 10px; font-size: 1.4rem; color: dimgray; }
+
+#contents { position: relative; padding: 25px 0; margin: 0 0 25px 0}
+#contents :after { content: ''; position: absolute; left: 50%; top: 0; width: 1px; height: 100%; background: #e3dede; }
+#contents .box span { display: block; position: relative; font-size: 1.3rem; letter-spacing: -0.5px; line-height: 3; color: #8b8687; }
+#contents .box span:before { content: ''; position: absolute; top: 20px; width: 7px; height: 7px; border-radius: 50%; background: dimgray; z-index: 1; }
+#contents .box span:after { content: ''; position: static}
+#contents .box:nth-of-type(odd) { padding-right: 50%; text-align: right; }
+#contents .box:nth-of-type(odd) span{ padding-right: 40px; }
+#contents .box:nth-of-type(odd) span:before{ right: -4px; }
+#contents .box:nth-of-type(even) { padding-left: 50%; text-align: left; }
+#contents .box:nth-of-type(even) span { padding-left: 40px; }
+#contents .box:nth-of-type(even) span:before { left: -3px; }
+#connections { position: relative; padding: 25px 0;}
+#connections > a { margin: 0 12px; }
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    line-height: 2;
+}
+footer #lang a { margin: 0 10px; font-size: 1.4rem; }
+footer #copy { font-size: 1.2rem; }
+
+a { text-decoration: none; color: dimgray; }
+
+.profile-img {
+    box-shadow: 3px 10px 10px 0 lightgray;
+    border-radius: 70%;
+}
+
+/* Smartphone (portrait) */
+@media only screen and (max-width : 480px) {
+    html, body { font-size: 6px; }
+    #container { width: 90%; }
+    #contents .box span:before { top: 12px; width: 5px; height: 5px; }
+    #contents .box:nth-of-type(odd) span{ padding-right: 35px; }
+    #contents .box:nth-of-type(odd) span:before{ right: -3px; }
+    #contents .box:nth-of-type(even) span { padding-left: 35px; }
+    #contents .box:nth-of-type(even) span:before { left: -2px; }
+    .profile-img { width: 35%; }
+}
+
+/* Smartphone (landscape) */
+@media only screen and (min-width : 481px) and (max-width : 895px) {
+    html, body { font-size: 6px; }
+    #container { width: 90%; }
+    #contents .box span:before { top: 12px; width: 5px; height: 5px; }
+    #contents .box:nth-of-type(odd) span:before{ right: -3px; }
+    #contents .box:nth-of-type(even) span:before { left: -2px; }
+    .profile-img { width: 20%; }
+}
+
+/* Tablet (portrait) */
+@media only screen and (min-device-width : 896px) and (max-device-width : 1024px) and (orientation : portrait) {
+    #container { width: 80%; }
+    .profile-img { width: 25%; }
+}
+
+/* Tablet (landscape) */
+@media only screen and (min-device-width : 896px) and (max-device-width : 1024px) and (orientation : landscape) {
+    #container { width: 80%; }
+    .profile-img { width: 25%; }
+}
+
+/* Desktop and laptop */
+@media only screen and (min-width : 1025px) {
+    #container { width: 50%; }
+    .profile-img { width: 25%; }
+}
+
+#container {
+    animation: fadein 1500ms;
+    -moz-animation: fadein 1500ms; /* Firefox */
+    -webkit-animation: fadein 1500ms; /* Safari and Chrome */
+    -o-animation: fadein 1500ms; /* Opera */
+}
+
+@keyframes fadein {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+    from { opacity:0; }
+    to { opacity: 1; }
+}
